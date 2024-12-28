@@ -19,9 +19,7 @@
 
 /**
  * @param {{userName?:string,action?:string}} object
- * @return {string}
+ * @return {string}しました
  */
 
-export const createUserActionString = (object) => {
-  //ここに記述
-};
+export const createUserActionString = (object) => {};
