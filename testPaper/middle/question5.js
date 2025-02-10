@@ -11,6 +11,4 @@
  * @param {string} text
  */
 
-export const changeElementText = (elementId, text) => {
-  //ここに記述
-};
+export const changeElementText = (elementId, text) => {};

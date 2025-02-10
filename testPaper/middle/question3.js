@@ -13,6 +13,10 @@
  * @param {number[]} array
  *  @return {{sum:number,average:number}}
  */
-export const sumAndAverage = (array) => {
-  //ここに記述
-};
+// export const sumAndAverage = (array) => {
+//   const total = array.reduce(function (a, b) {
+//     return a + b;
+//   });
+//   const ave = Mathfloor(total / array.length);
+//   return { sum: total, average: ave };
+// };

@@ -17,5 +17,13 @@
  *  @return {(string|number)[]}
  */
 export const toggleArrayElement = (array, ele) => {
-  //ここに記述
+  let exist = array.includes(ele);
+  if (exist === true) {
+    return array.filter(function (answer) {
+      return answer !== ele;
+    });
+  }
+  if (exist === false) {
+    return (array[array.length] = ele);
+  }
 };
