@@ -11,4 +11,8 @@
  * @param {string} text
  */
 
-export const changeElementText = (elementId, text) => {};
+export const changeElementText = (elementId, text) => {
+  document.getElementById;
+  let nothave = document.createElement("body");
+  nothave.textContent = text;
+};
