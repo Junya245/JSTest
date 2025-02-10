@@ -26,11 +26,11 @@
 
 export const createUserActionString = (object) => {
   if (
-    object.userName === "" ||
-    (object.userName === undefined && object.action === "") ||
-    object.action === undefined
+    object === undefined ||
+    ((object.userName === "" || object.userName === undefined) &&
+      (object.action === "" || object.action === undefined))
   ) {
-    return "";
+    return "名無しさんは何もしませんでした";
   }
   if (object.userName === "" || object.userName === undefined) {
     return `名無しさんが${object.action}しました`;
