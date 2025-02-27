@@ -18,9 +18,8 @@ const TestComponent2 = ({ userNames }) => {
   return (
     <ul>
       {userNames.map((userName, index) => {
-        if (userName === "自分") {
-          return "";
-        } else {
+        if (userName !== "自分") {
+          <li key={index}></li>;
           return TestComponent1(userName);
         }
       })}
@@ -29,5 +28,3 @@ const TestComponent2 = ({ userNames }) => {
 };
 
 export default TestComponent2;
-
-// userNames = [k , a , s]
