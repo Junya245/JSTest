@@ -12,6 +12,7 @@
  * @param {{userNames:string[]}} props
  * @returns {ReactNode}
  */
+
 const TestComponent2 = ({ userNames }) => {
   <ul></ul>;
 };

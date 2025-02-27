@@ -14,12 +14,17 @@
 export const changeElementText = (elementId, text) => {
   //elementidを取得
   const parent = document.getElementById(elementId);
-  //テキスト変更
-  parent.textContent = text;
-  //divタグを作る
-  const child = document.createElement("div");
-  //テキスト変更
-  child.textContent = text;
-  //子要素追加
-  parent.appendChild(child);
+  if (parent) {
+    //テキスト変更
+    parent.textContent = text;
+  } else {
+    //divタグを作る
+    // <div id=elementId></div>
+    const child = document.createElement("div");
+    child.setAttribute("id", elementId);
+    //テキスト変更
+    child.textContent = text;
+    //子要素追加
+    document.body.appendChild(child);
+  }
 };

@@ -18,10 +18,13 @@
 import { useState } from "react";
 
 const TestComponent1 = ({ userName }) => {
-  const [isDone, setIsDone] = useState();
+  const [isDone, setIsDone] = useState(false);
   return (
     <li>
-      <span></span>
+      <span style={{ textDecoration: isDone ? "line-through" : "none" }}>
+        {userName}
+      </span>
+
       <button>完了</button>
     </li>
   );
