@@ -14,19 +14,16 @@
  */
 import TestComponent1 from "./question6";
 
-const TestComponent2 = ({ userNames, index }) => {
+const TestComponent2 = ({ userNames }) => {
   return (
     <ul>
       {userNames.map((userName) => {
-        if (userName === "自分") {
-          return "";
-        } else {
-          return TestComponent1();
-        }
+        return TestComponent1(userName);
       })}
-      key= {index}
     </ul>
   );
 };
 
 export default TestComponent2;
+
+// userNames = [k , a , s]
