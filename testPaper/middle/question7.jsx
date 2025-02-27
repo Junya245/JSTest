@@ -21,7 +21,7 @@ const TestComponent2 = ({ userNames, index }) => {
         if (userName === "自分") {
           return "";
         } else {
-          return userName;
+          return "自分";
         }
       })}
       key= {index}
