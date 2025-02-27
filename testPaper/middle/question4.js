@@ -24,6 +24,6 @@ export const toggleArrayElement = (array, ele) => {
     });
   }
   if (exist === false) {
-    return array.push(ele);
+    array.push(ele);
   }
 };
