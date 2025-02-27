@@ -7,7 +7,7 @@
 //引数の例
 // 1. array: [1,2,3,4,5], ele: 4
 // 2. array: [1,2,"3",4,5], ele:3
-//返り値の例
+//返り値の例ｑ
 // 1. [1,2,3,5]
 // 2. [1,2,"3",4,5,3]
 
@@ -17,5 +17,14 @@
  *  @return {(string|number)[]}
  */
 export const toggleArrayElement = (array, ele) => {
-  //ここに記述
+  let exist = array.includes(ele);
+  if (exist === true) {
+    return array.filter(function (answer) {
+      return answer !== ele;
+    });
+  }
+  if (exist === false) {
+    array.push(ele);
+    return array;
+  }
 };

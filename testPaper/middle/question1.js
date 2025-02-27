@@ -5,6 +5,8 @@
 //    userNameに空文字("")か値が渡って来なかった時は人の名前を名無しに変更してください。
 //    actionに空文字("")か値が渡って来なかった時は"~さんは何もしませんでした"に変更してください。
 
+// import { test } from "bun:test";
+
 // 引数の例
 // 1. {userName:"田中",action:"挨拶"}
 // 2. {userName:"山田",action:"洗濯"}
@@ -19,9 +21,23 @@
 
 /**
  * @param {{userName?:string,action?:string}} object
- * @return {string}
+ * @return {string}しました
  */
 
 export const createUserActionString = (object) => {
-  //ここに記述
+  if (
+    object === undefined ||
+    ((object.userName === "" || object.userName === undefined) &&
+      (object.action === "" || object.action === undefined))
+  ) {
+    return "名無しさんは何もしませんでした";
+  }
+  if (object.userName === "" || object.userName === undefined) {
+    return `名無しさんが${object.action}しました`;
+  }
+  if (object.action === "" || object.action === undefined) {
+    return `${object.userName}さんは何もしませんでした`;
+  }
+  return `${object.userName}さんが${object.action}しました`;
 };
+createUserActionString();
