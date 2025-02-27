@@ -17,8 +17,12 @@ import TestComponent1 from "./question6";
 const TestComponent2 = ({ userNames }) => {
   return (
     <ul>
-      {userNames.map((userName) => {
-        return TestComponent1(userName);
+      {userNames.map((userName, index) => {
+        if (userName === "自分") {
+          return "";
+        } else {
+          return TestComponent1(userName);
+        }
       })}
     </ul>
   );
