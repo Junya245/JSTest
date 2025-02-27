@@ -12,9 +12,21 @@
  * @param {{userNames:string[]}} props
  * @returns {ReactNode}
  */
+import TestComponent1 from "./question6";
 
-const TestComponent2 = ({ userNames }) => {
-  <ul></ul>;
+const TestComponent2 = ({ userNames, index }) => {
+  return (
+    <ul>
+      {userNames.map((userName) => {
+        if (userName === "自分") {
+          return "";
+        } else {
+          return userName;
+        }
+      })}
+      key= {index}
+    </ul>
+  );
 };
 
 export default TestComponent2;
